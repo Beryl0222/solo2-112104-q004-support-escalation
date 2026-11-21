@@ -1,0 +1,26 @@
+[
+  {
+    "id": "support-1",
+    "channel": "web",
+    "turn": 1,
+    "text": "订单 A 还没到，麻烦查下物流。"
+  },
+  {
+    "id": "support-2",
+    "channel": "web",
+    "turn": 2,
+    "text": "客服：今天下班前给您核对承运信息。"
+  },
+  {
+    "id": "support-3",
+    "channel": "web",
+    "turn": 3,
+    "text": "另一个订单 B 的扣款我已经退回了吗？"
+  },
+  {
+    "id": "support-4",
+    "channel": "email",
+    "turn": 4,
+    "text": "补充：提到的退款是订单 B 的重复扣款，订单 A 仍只需查询物流。"
+  }
+]
