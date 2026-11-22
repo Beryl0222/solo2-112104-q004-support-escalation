@@ -1,0 +1,18 @@
+{
+  "A": {
+    "carrier": "顺丰",
+    "delivery_status": "shipped",
+    "days_since_dispatch": 4
+  },
+  "B": {
+    "charge_status": "duplicate"
+  },
+  "C": {
+    "charge_status": "duplicate"
+  },
+  "D": {
+    "delivery_status": "delivered",
+    "tracking_status": "delivered",
+    "carrier": "中通"
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {"id": "amb-1", "channel": "web", "turn": 1, "speaker": "customer", "timestamp": "2026-10-30T11:00:00", "text": "订单 A 的物流太慢了，还没到。"},
+  {"id": "amb-2", "channel": "web", "turn": 2, "speaker": "agent", "timestamp": "2026-10-30T11:01:00", "text": "客服：我帮您核对订单 A 的承运信息。"},
+  {"id": "amb-3", "channel": "web", "turn": 3, "speaker": "customer", "timestamp": "2026-10-30T11:02:00", "text": "订单 B 扣了两次款，我要退款。"},
+  {"id": "amb-4", "channel": "web", "turn": 4, "speaker": "agent", "timestamp": "2026-10-30T11:03:00", "text": "客服：订单 B 退款需审核，两单今天下班前都给您答复。"},
+  {"id": "amb-5", "channel": "phone", "turn": 5, "speaker": "customer", "timestamp": "2026-10-30T11:10:00", "text": "那个订单的退款到哪一步了？"},
+  {"id": "amb-6", "channel": "email", "turn": 6, "speaker": "customer", "timestamp": "2026-11-02T08:00:00", "text": "补充：我问的是刚才说的那个退款，订单 B。"},
+  {"id": "amb-7", "channel": "web", "turn": 7, "speaker": "customer", "timestamp": "2026-11-02T08:05:00", "text": "订单 C 的物流也查一下。"},
+  {"id": "amb-8", "channel": "web", "turn": 8, "speaker": "customer", "timestamp": "2026-11-02T08:06:00", "text": "我不是要退款，订单 C 只要物流信息。"},
+  {"id": "amb-9", "channel": "web", "turn": 9, "speaker": "agent", "timestamp": "2026-11-02T08:07:00", "text": "客服：订单 C 的承运信息明天上午给您。"},
+  {"id": "amb-10", "channel": "web", "turn": 10, "speaker": "customer", "timestamp": "2026-11-02T08:08:00", "text": "订单 C 的物流明天上午给您，别重复了。"}
+]

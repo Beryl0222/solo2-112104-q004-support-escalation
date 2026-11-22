@@ -1,0 +1,152 @@
+[
+  {
+    "policy_id": "POL-REFUND",
+    "version": "2026.09",
+    "applies_to": ["refund"],
+    "allows": true,
+    "action": "退款",
+    "summary": "退款政策 2026.09：已支付订单出现重复扣款且客户提供扣款凭证的，可退回重复部分。",
+    "source": "合成政策库 POL-REFUND 2026.09（演练资料）",
+    "effective_at": "2026-09-01T00:00:00",
+    "conditions": [
+      {
+        "code": "charge_is_duplicate",
+        "description": "扣款为重复扣款",
+        "field": "charge_status",
+        "operator": "equals",
+        "value": "duplicate",
+        "prompt": "请问这笔订单是否确实发生了重复扣款？请提供两次扣款的流水或截图。",
+        "source_quote": "出现重复扣款……可退回重复部分",
+        "audience": "customer"
+      },
+      {
+        "code": "refund_proof",
+        "description": "客户提供扣款凭证",
+        "field": "refund_proof",
+        "operator": "truthy",
+        "value": true,
+        "prompt": "请客户提供两次扣款的支付凭证（银行或支付平台流水）。",
+        "source_quote": "客户提供扣款凭证的，可退回重复部分",
+        "audience": "customer"
+      },
+      {
+        "code": "within_window",
+        "description": "在可退窗口内（发货后天数不超过 30 天）",
+        "field": "days_since_dispatch",
+        "operator": "lte",
+        "value": 30,
+        "prompt": "请确认该订单的发货日期，以判断是否仍在 30 天可退窗口内。",
+        "source_quote": "退款申请应在发货后 30 天内提出",
+        "audience": "internal"
+      }
+    ]
+  },
+  {
+    "policy_id": "POL-REFUND",
+    "version": "2026.11",
+    "applies_to": ["refund"],
+    "allows": true,
+    "action": "退款",
+    "summary": "退款政策 2026.11：重复扣款可退，窗口收紧为发货后 15 天内，且必须提供扣款凭证。",
+    "source": "合成政策库 POL-REFUND 2026.11（演练资料）",
+    "effective_at": "2026-11-01T00:00:00",
+    "conditions": [
+      {
+        "code": "charge_is_duplicate",
+        "description": "扣款为重复扣款",
+        "field": "charge_status",
+        "operator": "equals",
+        "value": "duplicate",
+        "prompt": "请问这笔订单是否确实发生了重复扣款？请提供两次扣款的流水或截图。",
+        "source_quote": "出现重复扣款……可退回重复部分",
+        "audience": "customer"
+      },
+      {
+        "code": "refund_proof",
+        "description": "客户提供扣款凭证",
+        "field": "refund_proof",
+        "operator": "truthy",
+        "value": true,
+        "prompt": "请客户提供两次扣款的支付凭证（银行或支付平台流水）。",
+        "source_quote": "客户提供扣款凭证的，可退回重复部分",
+        "audience": "customer"
+      },
+      {
+        "code": "within_window",
+        "description": "在可退窗口内（发货后天数不超过 15 天）",
+        "field": "days_since_dispatch",
+        "operator": "lte",
+        "value": 15,
+        "prompt": "请确认该订单的发货日期，以判断是否仍在 15 天可退窗口内。",
+        "source_quote": "退款申请应在发货后 15 天内提出",
+        "audience": "internal"
+      }
+    ]
+  },
+  {
+    "policy_id": "POL-LOGISTICS",
+    "version": "2026.05",
+    "applies_to": ["logistics"],
+    "allows": true,
+    "action": "承运核查",
+    "summary": "物流查询政策：客户询问未送达时，坐席核对承运信息并告知预计送达时间。",
+    "source": "合成政策库 POL-LOGISTICS 2026.05（演练资料）",
+    "effective_at": "2026-05-01T00:00:00",
+    "conditions": [
+      {
+        "code": "carrier_known",
+        "description": "订单已分配承运商",
+        "field": "carrier",
+        "operator": "truthy",
+        "value": true,
+        "prompt": "请确认该订单的承运商；系统里没有承运记录，需要物流团队补录。",
+        "source_quote": "坐席核对承运信息",
+        "audience": "internal"
+      }
+    ]
+  },
+  {
+    "policy_id": "POL-CANCEL",
+    "version": "2026.03",
+    "applies_to": ["cancel"],
+    "allows": true,
+    "action": "取消订单",
+    "summary": "取消政策：未发货订单可取消；已发货订单需走退货流程。",
+    "source": "合成政策库 POL-CANCEL 2026.03（演练资料）",
+    "effective_at": "2026-03-01T00:00:00",
+    "conditions": [
+      {
+        "code": "not_dispatched",
+        "description": "订单尚未发货",
+        "field": "delivery_status",
+        "operator": "not_equals",
+        "value": "delivered",
+        "prompt": "请确认该订单是否已经发货；系统状态缺失时不能直接承诺取消。",
+        "source_quote": "未发货订单可取消",
+        "audience": "internal"
+      }
+    ]
+  },
+  {
+    "policy_id": "POL-CARE",
+    "version": "2026.07",
+    "applies_to": ["complaint"],
+    "allows": true,
+    "action": "客户关怀回访",
+    "summary": "投诉政策：客户表达不满时安排关怀回访；不满本身不等于赔付或退款依据。",
+    "source": "合成政策库 POL-CARE 2026.07（演练资料）",
+    "effective_at": "2026-07-01T00:00:00",
+    "conditions": [
+      {
+        "code": "order_identified",
+        "description": "已能关联具体订单",
+        "field": "order_identified",
+        "operator": "truthy",
+        "value": true,
+        "prompt": "请先确认客户不满对应的订单号，再安排关怀回访。",
+        "source_quote": "投诉需关联具体订单",
+        "audience": "customer"
+      }
+    ]
+  }
+]

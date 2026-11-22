@@ -1,0 +1,106 @@
+[
+  {
+    "id": "conv2-1",
+    "channel": "web",
+    "turn": 1,
+    "speaker": "customer",
+    "timestamp": "2026-10-28T09:00:00",
+    "text": "订单 A 到现在还没到，麻烦查下物流。"
+  },
+  {
+    "id": "conv2-2",
+    "channel": "web",
+    "turn": 2,
+    "speaker": "agent",
+    "timestamp": "2026-10-28T09:01:00",
+    "text": "客服：收到，我核对承运信息后今天下班前回复您。"
+  },
+  {
+    "id": "conv2-3",
+    "channel": "web",
+    "turn": 3,
+    "speaker": "customer",
+    "timestamp": "2026-10-28T09:02:00",
+    "text": "好的。另外订单 B 的重复扣款一直没退，我要申请退款。"
+  },
+  {
+    "id": "conv2-4",
+    "channel": "web",
+    "turn": 4,
+    "speaker": "agent",
+    "timestamp": "2026-10-28T09:03:00",
+    "text": "客服：订单 B 的退款我今天下班前为您提交退款审核。"
+  },
+  {
+    "id": "conv2-5",
+    "channel": "email",
+    "turn": 5,
+    "speaker": "customer",
+    "timestamp": "2026-10-28T09:04:00",
+    "text": "补充：订单 B 的扣款实际是重复扣款，凭证已上传，发货后第 6 天；订单 A 仍只需查询物流。"
+  },
+  {
+    "id": "conv2-6",
+    "channel": "phone",
+    "turn": 6,
+    "speaker": "customer",
+    "timestamp": "2026-10-28T09:10:00",
+    "text": "那个订单的物流到底什么时候能到？"
+  },
+  {
+    "id": "conv2-7",
+    "channel": "web",
+    "turn": 7,
+    "speaker": "customer",
+    "timestamp": "2026-10-28T09:11:00",
+    "text": "订单 C 也有一样的问题，麻烦一起退款。"
+  },
+  {
+    "id": "conv2-8",
+    "channel": "email",
+    "turn": 8,
+    "speaker": "customer",
+    "timestamp": "2026-10-28T09:12:00",
+    "text": "补充：订单 C 是重复扣款，凭证已上传，发货后第 20 天。"
+  },
+  {
+    "id": "conv2-9",
+    "channel": "web",
+    "turn": 9,
+    "speaker": "agent",
+    "timestamp": "2026-11-03T10:02:00",
+    "text": "客服：订单 B 的退款已提交升级财务审核，预计 3 个工作日内答复。"
+  },
+  {
+    "id": "conv2-10",
+    "channel": "web",
+    "turn": 10,
+    "speaker": "customer",
+    "timestamp": "2026-11-03T10:05:00",
+    "text": "你们这个处理太慢了，我很失望。"
+  },
+  {
+    "id": "conv2-11",
+    "channel": "web",
+    "turn": 11,
+    "speaker": "customer",
+    "timestamp": "2026-11-03T10:06:00",
+    "text": "我还要取消订单 D。"
+  },
+  {
+    "id": "conv2-12",
+    "channel": "web",
+    "turn": 12,
+    "speaker": "agent",
+    "timestamp": "2026-11-03T10:07:00",
+    "text": "客服：订单 D 已发货，无法直接取消，需走退货流程。"
+  },
+  {
+    "id": "conv2-13",
+    "channel": "phone",
+    "turn": 13,
+    "speaker": "customer",
+    "timestamp": "2026-11-03T10:08:00",
+    "text": "订单 B 的退款到账了，谢谢。"
+  }
+]
